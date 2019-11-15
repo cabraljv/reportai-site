@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ReporAí</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function trocaClasse(elemento, antiga, nova) {
+      elemento.classList.remove(antiga);
+      elemento.classList.add(nova);
+    }
+    function typeWrite(elemento) {
+      const textoArray = elemento.innerHTML.split('');
+      elemento.innerHTML = ' ';
+      textoArray.forEach(function (letra, i) {
+
+        setTimeout(function () {
+          elemento.innerHTML += letra;
+        }, 75 * i)
+
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <nav>
+    <section>
+      <img src="./assets/logo.png" />
+      <h1>ReportAí</h1>
+    </section>
+    <ul>
+      <li id="ativo">Home</li>
+      <li>Download</li>
+      <li>Sobre</li>
+      <li>Mapa</li>
+    </ul>
+  </nav>
+  <header>
+    <aside>
+
+      <p>O ReportAí é uma plataforma de fiscalização colaborativa, que utiliza do poder dos
+        smartphones para melhorar a
+        comunidade</p>
+      <script>
+        setTimeout(function () {
+          const titulo = document.querySelector('.elemento_ponto');
+          typeWrite(titulo);
+        }, 0);
+
+      </script>
+      <p class="elemento_ponto" id="msg">O ReportAí acredita no poder da transparência</p>
+      <div>
+        <img src="./assets/androidRed.png" />
+        <p>Download</p>
+      </div>
+    </aside>
+    <img src="./assets/celular.png" />
+  </header>
+
+  <section id="percurso">
+    <h2>Chega de burocracia!</h2>
+    <div id="desenho">
+      <script>
+        setTimeout(function () {
+          var div = document.querySelector('div.linha');
+          trocaClasse(div, 'linha', 'completa');
+        }, 500);
+
+      </script>
+
+      <div class="escrito_ponto">
+        <script>
+          setTimeout(function () {
+            var div = document.querySelector('div.ponto');
+            trocaClasse(div, 'ponto', 'completo_ponto');
+          }, 200);
+        </script>
+        <div class="ponto"></div>
+        <p style="margin-left: -7px;">Encontre</p>
+      </div>
+
+      <div class="linha"></div>
+      <div class="escrito_ponto">
+        <script>
+          setTimeout(function () {
+            var div = document.querySelector('div.ponto');
+            trocaClasse(div, 'ponto', 'completo_ponto');
+          }, 1000);
+        </script>
+        <div class="ponto"></div>
+
+        <p style="margin-left: -7px;">Reporte</p>
+      </div>
+      <script>
+        setTimeout(function () {
+          var div = document.querySelector('div.linha');
+          trocaClasse(div, 'linha', 'completa');
+        }, 1600);
+      </script>
+      <div class="linha"></div>
+      <div class="escrito_ponto">
+        <script>
+          setTimeout(function () {
+            var div = document.querySelector('div.ponto');
+            trocaClasse(div, 'ponto', 'completo_ponto');
+          }, 2200);
+        </script>
+        <div class="ponto"></div>
+        <p style="margin-left: -15px;">Acompanhe</p>
+      </div>
+      <script>
+        setTimeout(function () {
+          var div = document.querySelector('div.linha');
+          trocaClasse(div, 'linha', 'completa');
+        }, 2700);
+      </script>
+      <div class="linha"></div>
+      <div class="escrito_ponto">
+        <script>
+          setTimeout(function () {
+            var div = document.querySelector('div.ponto');
+            trocaClasse(div, 'ponto', 'completo_ponto');
+          }, 3700);
+        </script>
+        <div class="ponto"></div>
+        <p style="margin-left: -7px;">Resolva</p>
+      </div>
+    </div>
+  </section>
+  <section id="info">
+    <aside>
+      <h2>Sobre o projeto</h2>
+      <p>
+        O potencial da combinação de smartphones com aplicativos ainda está longe
+        de se esgotar. Combinando-se alguns de seus recursos mais poderosos, como
+        a internet móvel, o GPS e a câmera, o celular pode transformar seu usuário em
+        uma unidade independente de fiscalização do que está acontecendo ao seu
+        redor. O atual projeto visa desenvolver a plataforma ReportAí, que atuará como
+        um canal de comunicação voltado para a cidadania com o objetivo de conectar
+        os cidadãos e a administração de maneira transparente e com foco na
+        resolução de problemas, e na avaliação dos serviços públicos. A estrutura do
+        ReportAí será formada por um ambiente de interação entre os usuários, via
+        smartphones, e relatórios, nos quais uma entidade ou órgão público,
+        concessionárias ou organizações da sociedade civil podem gerenciar as
+        demandas dos cidadãos de forma prática e inteligente. O ReportAí será
+        construído com base em dois pilares, são eles: (1) Fiscalize, onde o cidadão
+        pode utilizar para postar a sua localização, com foto e texto explicito que
+        informe o problema naquela localização; (2) Avalie, permite que o cidadão
+        possa avaliar a qualidade de serviços prestados pelos órgãos públicos. Espera-
+        se que a plataforma estimule a participação ativa dos cidadãos na comunidade,
+        para que possa servir de parâmetro norteador na tomada de decisão da
+        administração para maximizar os recursos disponíveis destinados à
+        manutenção da cidade.
+      </p>
+    </aside>
+    <div>
+      <img src="./assets/camara.png" />
+      <p>Apresentação do projeto ReportAí na câmara de Ponte Nova</p>
+    </div>
+  </section>
+  <section id="downloads">
+    <h2>Downloads</h2>
+    <p>Infelizmente, por não dispormos de um computador com o sistema MAC OS, não disponibilizamos
+      ainda a versão para IOS </p>
+    <div id="disp">
+      <div>
+        <img src="./assets/android.png" />
+        <a href="/">Versão estável</a>
+        <a href="/">Versão Beta</a>
+
+      </div>
+      <div>
+        <img src="./assets/apple.png" />
+        <a href="/">Indisponível</a>
+      </div>
+    </div>
+  </section>
+  <section id="mapa">
+    <h2>Mapa de Reports ao vivo</h2>
+  </section>
+  <footer>
+    <p>©Copyright 2019 ReportAí™</p>
+    <p>Site desenvolvido por João Victor Cabral</p>
+    <p>IFMG Campus avançado Ponte Nova</p>
+  </footer>
+</body>
+
+</html>
