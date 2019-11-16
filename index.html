@@ -24,6 +24,7 @@
       });
     }
   </script>
+  <script src="http://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
 </head>
 
 <body>
@@ -33,10 +34,16 @@
       <h1>ReportAí</h1>
     </section>
     <ul>
-      <li id="ativo">Home</li>
-      <li>Download</li>
-      <li>Sobre</li>
-      <li>Mapa</li>
+      <script>
+        $('.smooth-goto').on('click', function () {
+          $('html, body').animate({ scrollTop: $(this.hash).offset().top - 50 }, 1000);
+          return false;
+        });
+      </script>
+      <li id="ativo"><a>Home</a></li>
+      <li><a href="#downloads" class="smooth-goto">Download</a></li>
+      <li><a>Sobre</a></li>
+      <li><a>Mapa</a></li>
     </ul>
   </nav>
   <header>
@@ -53,12 +60,17 @@
 
       </script>
       <p class="elemento_ponto" id="msg">O ReportAí acredita no poder da transparência</p>
-      <div>
+      <script>
+        function abreGooglePlay() {
+          window.open('https://play.google.com/store/apps/details?id=com.reportai', '_blank');
+        }
+      </script>
+      <div onclick="abreGooglePlay()">
         <img src="./assets/androidRed.png" />
         <p>Download</p>
       </div>
     </aside>
-    <img src="./assets/celular.png" />
+    <img src="./assets/celular.png" id="cel" />
   </header>
 
   <section id="percurso">
@@ -169,7 +181,7 @@
     <div id="disp">
       <div>
         <img src="./assets/android.png" />
-        <a href="/">Versão estável</a>
+        <a href="https://play.google.com/store/apps/details?id=com.reportai">Versão estável</a>
         <a href="/">Versão Beta</a>
 
       </div>
@@ -181,6 +193,13 @@
   </section>
   <section id="mapa">
     <h2>Mapa de Reports ao vivo</h2>
+    <div id="container-map">
+      <div id="map"></div>
+    </div>
+    <script src="mapjs.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgPD8kf3Vaq4_Uz1C3BuKAfraGWC6HtuY&callback=initMap">
+      </script>
   </section>
   <footer>
     <p>©Copyright 2019 ReportAí™</p>

@@ -17,6 +17,7 @@ nav{
   height: 100px;
   width: 100%;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  z-index: 10;
 
 }
 nav section{
@@ -30,6 +31,8 @@ nav{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: fixed;
+  background: #fff;
   
 }
 nav section h1{
@@ -54,6 +57,11 @@ nav ul li{
   padding-top: 40px;
 
 }
+nav ul li a{
+  text-decoration: none;
+  color: #484848;
+
+}
 nav ul li#ativo{
   border-bottom: 5px solid #FF5F5F;
 }
@@ -62,6 +70,7 @@ header{
   height: 500px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-top: 100px;
 }
 header aside{
   margin: 30px;
@@ -81,10 +90,24 @@ header aside p#msg{
 }
 header{
   align-content: center;
+  overflow: hidden;
 }
 header img{
   height: 350px;
   padding-left: 100px;
+  
+}
+header img#cel{
+  animation: img_cel 2s;
+}
+@keyframes img_cel{
+  from{
+    padding-left: 500px
+
+  }
+  to{
+    padding-left: 100px
+  }
 }
 header aside div{
   height: 70px;
@@ -96,6 +119,7 @@ header aside div{
   flex-direction: row;
   border-radius: 15px;
   text-align: center;
+  cursor: pointer;
 
 }
 header aside div img{
@@ -239,6 +263,7 @@ section#info div p{
 section#info aside p{
   color: #484848;
   padding-top: 20px;
+  text-align: justify;
 }
 section#downloads{
   background: #FF5F5F;
@@ -288,6 +313,17 @@ section#mapa h2{
   font-family: Economica;
   font-size: 2em;
   margin-top: 30px;
+}
+section#mapa div#container-map{
+  width: 70%;
+  height: 80%;
+  margin: auto;
+  margin-top: 40px;
+}
+section#mapa div#container-map div#map{
+  height: 100%;
+  widows: 100%;
+  border-radius: 10px;
 }
 footer{
   background: #FF5F5F;
