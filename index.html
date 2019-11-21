@@ -28,24 +28,33 @@
 </head>
 
 <body>
-  <nav>
-    <section>
+  <div id="navigation">
+    <section id="navbar">
       <img src="./assets/logo.png" />
       <h1>ReportAí</h1>
     </section>
-    <ul>
-      <script>
-        $('.smooth-goto').on('click', function () {
-          $('html, body').animate({ scrollTop: $(this.hash).offset().top - 50 }, 1000);
-          return false;
-        });
-      </script>
-      <li id="ativo"><a>Home</a></li>
-      <li><a href="#downloads" class="smooth-goto">Download</a></li>
-      <li><a>Sobre</a></li>
-      <li><a>Mapa</a></li>
-    </ul>
-  </nav>
+
+
+    <input id="burger" type="checkbox" />
+
+    <label for="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav>
+      <ul>
+        <li id="ativo"><a>Home</a></li>
+        <li><a href="#downloads">Download</a></li>
+        <li><a>Sobre</a></li>
+        <li><a>Proposta</a></li>
+        <li><a>Equipe</a></li>
+        <li><a>Mapa</a></li>
+      </ul>
+    </nav>
+  </div>
+
   <header>
     <aside>
 
@@ -142,37 +151,62 @@
         <p style="margin-left: -7px;">Resolva</p>
       </div>
     </div>
+
   </section>
   <section id="info">
     <aside>
       <h2>Sobre o projeto</h2>
       <p>
-        O potencial da combinação de smartphones com aplicativos ainda está longe
-        de se esgotar. Combinando-se alguns de seus recursos mais poderosos, como
-        a internet móvel, o GPS e a câmera, o celular pode transformar seu usuário em
-        uma unidade independente de fiscalização do que está acontecendo ao seu
-        redor. O atual projeto visa desenvolver a plataforma ReportAí, que atuará como
-        um canal de comunicação voltado para a cidadania com o objetivo de conectar
-        os cidadãos e a administração de maneira transparente e com foco na
-        resolução de problemas, e na avaliação dos serviços públicos. A estrutura do
-        ReportAí será formada por um ambiente de interação entre os usuários, via
-        smartphones, e relatórios, nos quais uma entidade ou órgão público,
-        concessionárias ou organizações da sociedade civil podem gerenciar as
-        demandas dos cidadãos de forma prática e inteligente. O ReportAí será
-        construído com base em dois pilares, são eles: (1) Fiscalize, onde o cidadão
-        pode utilizar para postar a sua localização, com foto e texto explicito que
-        informe o problema naquela localização; (2) Avalie, permite que o cidadão
-        possa avaliar a qualidade de serviços prestados pelos órgãos públicos. Espera-
-        se que a plataforma estimule a participação ativa dos cidadãos na comunidade,
-        para que possa servir de parâmetro norteador na tomada de decisão da
-        administração para maximizar os recursos disponíveis destinados à
-        manutenção da cidade.
+        ReportAí é uma plataforma que permite que os cidadãos notifiquem as autoridades competentes sobre problemas
+        urbanos não urgentes que ocorram em uma determinada localidade, tais como: estradas locais danificadas, imóveis
+        urbanos danificados, pichações, lixo em vias públicas, objetos bloqueando a pista, água ou esgoto a céu aberto,
+        necessidade da poda de árvores, problemas de sinalização, entre outros. A plataforma disponibiliza através de um
+        mapa interativo todos os problemas (eventos) reportados pelos cidadãos, assim como um relatório contendo o
+        histórico de cada problema reportado na plataforma. O principal objetivo da plataforma é que a mesma atue como
+        um canal ativo de comunicação entre os cidadãos e a administração pública, visando estimular a participação
+        ativa dos cidadãos na comunidade norteando e alinhando a tomada de decisão da administração para maximizar os
+        recursos disponíveis destinados a manutenção da cidade.
       </p>
     </aside>
     <div>
       <img src="./assets/camara.png" />
       <p>Apresentação do projeto ReportAí na câmara de Ponte Nova</p>
     </div>
+  </section>
+  <section id="proposta">
+    <h2>Proposta</h2>
+    <p>
+      No atual contexto em que vivemos o corte e a contenção dos gastos públicos faz parte de todas as discussões da
+      administração pública. Isso significa que os governos locais precisam ser mais eficientes do que nunca, forçando
+      seus departamentos a reinventar seus métodos e procedimentos enquanto buscam manter a qualidade de vida de seus
+      cidadãos por meio de programas que não consumam tantos recursos. O surgimento de novos paradigmas de interação
+      entre pessoas e sistemas, incluindo a interação com sistemas mobile e programas baseados em sensores, despertou a
+      conscientização das empresas para o desenvolvimento de aplicações com foco cívico e as sensibilizou para a
+      prestação de serviços voltados especialmente para os cidadãos. Para as empresas, o retorno do investimento neste
+      segmento é justificado pelo mercado dos dispositivos móveis segundo, o número de dispositivos móveis ativados até
+      dezembro de 2018 é de cerca de 4.9 bilhões de dispositivos e esse crescimento exponencial, é um dos principais
+      propulsores para tais sistemas, uma vez que o público está cada vez mais conectado as plataformas disponíveis.
+      Os problemas urbanos exigem a análise de diversas fontes de informação. Atualmente, as cidades capturam grandes
+      quantidades de informações em tempo real. Coletam-se dados de transporte, consumo de eletricidade, água, uso de
+      serviços governamentais e até mesmo em eventos climáticos. Por outro lado, existe ainda, uma gama de informações
+      dispersas pelo meio, que poderiam auxiliar na manutenção das cidades. Neste contexto, o cidadão está em constante
+      contato com essas informações, e muita das vezes não as leva a conhecimento dos órgãos públicos, pelo fato, de não
+      existir um canal menos burocrático e intuitivo para fazê-lo. Neste sentido, disponibilizar meios para transformar
+      este cidadão em uma entidade ativa de geração de informações e fiscalização, pode auxiliar muito na adoção de
+      novas políticas públicas e na disponibilização de recursos para a manutenção eficiente da cidade.
+      Considerando o cenário exposto acima, e aliando à necessidade de integração de aplicações setoriais num sistema de
+      informação geográfica, este projeto visa desenvolver uma plataforma voltada para o cidadão e para o exercício da
+      cidadania. A plataforma em questão será denominada ReportAí, e permitirá que os cidadãos notifiquem as autoridades
+      competentes sobre problemas urbanos não urgentes que ocorram em uma determinada localidade, tais como: estradas
+      locais danificadas, imóveis urbanos danificados, pichações, lixo em vias públicas, objetos bloqueando a pista,
+      água ou esgoto a céu aberto, necessidade da poda de árvores, problemas de sinalização, entre outros. A plataforma
+      disponibilizará através de um mapa interativo todos os problemas (eventos) reportados pelos cidadãos, assim como
+      um relatório contendo o histórico e comentários de cada problema reportado na plataforma. Espera-se que a
+      plataforma atue como um canal ativo de comunicação entre os cidadãos e a administração pública, visando estimular
+      a participação ativa dos cidadãos na comunidade norteando e alinhando a tomada de decisão da administração para
+      maximizar os recursos disponíveis destinados a manutenção da cidade.
+
+    </p>
   </section>
   <section id="downloads">
     <h2>Downloads</h2>
@@ -197,13 +231,30 @@
       <div id="map"></div>
     </div>
     <script src="mapjs.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=MY_KEY&callback=initMap">
-    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ_369ohA7fZtguvN2yabuqv979PrusWs&callback=initMap">
+      </script>
   </section>
   <footer>
-    <p>©Copyright 2019 ReportAí™</p>
-    <p>Site desenvolvido por João Victor Cabral</p>
-    <p>IFMG Campus avançado Ponte Nova</p>
+    <section id="equipe">
+      <div>
+        <h2>Equipe</h2>
+        <img src="./assets/camara.png" />
+      </div>
+
+      <div style="  padding-top: 50px;">
+        <p>Saulo Henrique Cabral - saulo.cabral@ifmg.edu.br </p>
+        <p>João Victor Cabral - joaovictorcabralsteam@gmail.com </p>
+        <p>João Pedro Carvalho - saulo.cabral@ifmg.edu.br </p>
+      </div>
+
+    </section>
+    <div id="credits">
+      <p>IFMG Campus Avançado Ponte Nova</p>
+      <p>Site desenvolvido por <a href="https://github.com/cabraljv">João Victor Cabral</a></p>
+    </div>
+
+
   </footer>
 </body>
 

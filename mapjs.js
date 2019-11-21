@@ -268,6 +268,22 @@ function initMap() {
         size: new google.maps.Size(60, 93),
       }
     }
+    if (marker.tipo === "Buraco") {
+      icon = {
+        url: './assets/iconBuraco.png',
+        // This marker is 20 pixels wide by 32 pixels high.
+        size: new google.maps.Size(60, 93),
+      }
+    }
+
+    if (marker.tipo === "Lixo") {
+      icon = {
+        url: './assets/iconLixo.png',
+        // This marker is 20 pixels wide by 32 pixels high.
+        size: new google.maps.Size(60, 93),
+      }
+    }
+
     new google.maps.Marker({
       animation: google.maps.Animation.DROP,
       position: {
