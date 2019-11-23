@@ -24,10 +24,56 @@
       });
     }
   </script>
-  <script src="http://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+  <script type="text/javascript" src="./assets/jquery-2.2.4.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      console.log('llll ');
+      $('nav a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        var id = $(this).attr('href'),
+          targetOffset = $(id).offset().top;
+
+
+        $('html, body').animate({
+          scrollTop: targetOffset - 100
+        }, 500);
+      });
+    });
+    $(window).scroll(function () {
+      var scroll = $(window).scrollTop();
+      if (scroll <= 800) {
+        $("nav li.ativo").removeClass("ativo");
+        $("nav li#homeli").addClass("ativo");
+      }
+      if (scroll >= 800) {
+        $("nav li.ativo").removeClass("ativo");
+        $("nav li#infoli").addClass("ativo");
+      }
+      if (scroll >= 1300) {
+        $("nav li.ativo").removeClass("ativo");
+        $("nav li#propli").addClass("ativo");
+      }
+      if (scroll >= 2000) {
+        $("nav li.ativo").removeClass("ativo");
+        $("nav li#downloadsli").addClass("ativo");
+      }
+      if (scroll >= 2500) {
+        $("nav li.ativo").removeClass("ativo");
+        $("nav li#mapli").addClass("ativo");
+      }
+      if (scroll >= 2850) {
+        $("nav li.ativo").removeClass("ativo");
+        $("nav li#equipeli").addClass("ativo");
+      }
+
+    });
+  </script>
+
 </head>
 
 <body>
+
   <div id="navigation">
     <section id="navbar">
       <img src="./assets/logo.png" />
@@ -45,12 +91,13 @@
 
     <nav>
       <ul>
-        <li id="ativo"><a>Home</a></li>
-        <li><a href="#downloads">Download</a></li>
-        <li><a>Sobre</a></li>
-        <li><a>Proposta</a></li>
-        <li><a>Equipe</a></li>
-        <li><a>Mapa</a></li>
+
+        <li id="homeli" class="ativo"><a href="#msg">Home</a></li>
+        <li id="downloadsli"><a href="#downloads">Download</a></li>
+        <li id="infoli"><a href="#info">Sobre</a></li>
+        <li id="propli"><a href="#proposta">Proposta</a></li>
+        <li id="equipeli"><a href="#equipe">Equipe</a></li>
+        <li id="mapli"><a href="#map">Mapa</a></li>
       </ul>
     </nav>
   </div>
@@ -256,6 +303,7 @@
 
 
   </footer>
+
 </body>
 
 </html>

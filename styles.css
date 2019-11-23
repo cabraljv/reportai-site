@@ -189,7 +189,7 @@ nav ul li a{
   color: #484848;
 
 }
-nav ul li#ativo{
+nav ul li.ativo{
   border-bottom: 5px solid #FF5F5F;
 }
 @media (max-width: 768px){
